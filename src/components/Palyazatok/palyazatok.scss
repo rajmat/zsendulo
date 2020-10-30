@@ -1,0 +1,71 @@
+.palyazatok-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  margin: 50px auto;
+
+  h1 {
+    font-size: 60pt;
+    font-weight: normal;
+    color: #707070;
+  }
+
+  .application-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+
+    margin: 50px auto;
+
+    width: 100%;
+
+    .palyazat {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+
+      border: 1px solid #707070;
+      border-radius: 10px;
+      margin: 30px auto;
+      padding: 30px;
+      box-sizing: border-box;
+
+      text-align: center;
+
+      h3 {
+        font-size: 30pt;
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: medium;
+      }
+
+      h5 {
+        font-weight: normal;
+        margin: 0;
+        font-size: 18pt;
+      }
+
+      p {
+        font-size: 12pt;
+        line-height: 1.5em;
+        color: #707070;
+      }
+
+      button {
+        background-color: #80D95B;
+        color: #ffffff;
+        width: max-content;
+        min-width: 200px;
+        margin: 0 auto;
+
+        &:hover {
+          background-color: #66ad48;
+        }
+      }
+    }
+  }
+}
