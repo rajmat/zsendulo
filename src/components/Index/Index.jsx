@@ -1,9 +1,12 @@
 import React from 'react';
 import Header from '../Header/Header';
 import Introduction from '../Introduction/Introduction';
-import Palyazatok from '../Palyazatok/Palyazatok';
-import ScrollTop from '../ScrollToTheTop/ScrollToTheTop';
 import Contact from '../Contact/Contact';
+import Accecssibility from '../Accessibility/Accessibility';
+import Partners from '../Partners/Partners';
+import Palyazatok from '../Palyazatok/Palyazatok';
+import Footer from '../Footer/Footer';
+import ScrollTop from '../ScrollToTheTop/ScrollToTheTop';
 
 import './index.scss';
 
@@ -13,7 +16,10 @@ const Index = () => {
       <Header />
       <Introduction />
       <Contact />
+      <Accecssibility />
+      <Partners />
       <Palyazatok />
+      <Footer />
       <ScrollTop />
     </div>
   );
