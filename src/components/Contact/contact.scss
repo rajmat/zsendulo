@@ -120,6 +120,10 @@
     .help-wrapper {
       width: 100%;
 
+      h1 {
+        font-size: 20pt;
+      }
+
       .content-wrapper {
         display: flex;
         flex-direction: column;

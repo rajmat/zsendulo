@@ -1,4 +1,6 @@
 import React from 'react';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import Fade from 'react-reveal/Fade';
 
 import picture from '../../assets/images/picture.png';
 
@@ -31,30 +33,38 @@ const Contact = () => {
   ];
 
   return (
-    <div className="contact-wrapper">
-      <div className="image-and-form-wrapper">
-        <div className="image-wrapper">
-          <img src={picture} alt="zsendulo" />
-        </div>
-        <div className="form-wrapper"></div>
-      </div>
-      <div className="help-wrapper">
-        <h1>Mi az, amivel segíteni tudsz nekünk?</h1>
-        <div className="content-wrapper">
-          {contents.map((content, index) => (
-            <div className="content" key={`help_${index}`}>
-              <div className="icon-wrapper">
-                <img src={content.icon} alt={`help_item_${index}`} />
-              </div>
-              <div className="content-desc-wrapper">
-                <h3>{content.title}</h3>
-                <p>{content.description}</p>
-              </div>
+    <LazyLoadComponent>
+      <Fade big>
+        <div className="contact-wrapper">
+          <div className="image-and-form-wrapper">
+            <div className="image-wrapper">
+              <LazyLoadComponent>
+                <img src={picture} alt="zsendulo" />
+              </LazyLoadComponent>
             </div>
-          ))}
+            <div className="form-wrapper"></div>
+          </div>
+          <div className="help-wrapper">
+            <h1>Mi az, amivel segíteni tudsz nekünk?</h1>
+            <div className="content-wrapper">
+              {contents.map((content, index) => (
+                <Fade bottom cascade key={`help_${index}`}>
+                  <div className="content">
+                    <div className="icon-wrapper">
+                      <img src={content.icon} alt={`help_item_${index}`} />
+                    </div>
+                    <div className="content-desc-wrapper">
+                      <h3>{content.title}</h3>
+                      <p>{content.description}</p>
+                    </div>
+                  </div>
+                </Fade>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </Fade>
+    </LazyLoadComponent>
   );
 };
 

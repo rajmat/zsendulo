@@ -1,4 +1,6 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
+
 import Button from '@material-ui/core/Button';
 
 import './palyazatok.scss';
@@ -40,12 +42,14 @@ const Palyazatok = () => {
       <h1>Pályázatok</h1>
       <div className="application-wrapper">
         {palyazatok.map((palyazat, index) => (
-          <div className="palyazat" key={`palyazat_${index}`}>
-            <h3>{palyazat.title}</h3>
-            <h5>{palyazat.subtitle}</h5>
-            <p>{palyazat.description}</p>
-            <Button className="button_1">{palyazat.button_text}</Button>
-          </div>
+          <Fade cascade key={`palyazat_${index}`}>
+            <div className="palyazat">
+              <h3>{palyazat.title}</h3>
+              <h5>{palyazat.subtitle}</h5>
+              <p>{palyazat.description}</p>
+              <Button className="button_1">{palyazat.button_text}</Button>
+            </div>
+          </Fade>
         ))}
       </div>
     </div>

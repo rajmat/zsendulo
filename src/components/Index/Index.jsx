@@ -5,6 +5,7 @@ import Contact from '../Contact/Contact';
 import Accecssibility from '../Accessibility/Accessibility';
 import Partners from '../Partners/Partners';
 import Palyazatok from '../Palyazatok/Palyazatok';
+import AboutUs from '../AboutUs/AboutUs';
 import Footer from '../Footer/Footer';
 import ScrollTop from '../ScrollToTheTop/ScrollToTheTop';
 
@@ -17,6 +18,7 @@ const Index = () => {
       <Introduction />
       <Contact />
       <Accecssibility />
+      <AboutUs />
       <Partners />
       <Palyazatok />
       <Footer />
