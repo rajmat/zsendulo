@@ -116,8 +116,8 @@ const Partners = () => {
       <Slider {...settings}>
         {partners.map((partner, index) => {
           return partner.logo || partner.description ? (
-            <Link to={partner.url} target={'__blank'}>
-              <div className="partner-wrapper" key={index}>
+            <Link to={partner.url} target={'__blank'} key={index}>
+              <div className="partner-wrapper" >
                 {partner.logo ? (
                   <div className="image-wrapper">
                     <img src={partner.logo} alt={`zsendulo_partner_${index}`} />

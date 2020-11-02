@@ -1,6 +1,5 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
 import superman from '../../assets/images/superman.png';
 import key from '../../assets/images/key.png';

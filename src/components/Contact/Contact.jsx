@@ -1,6 +1,7 @@
 import React from 'react';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import Fade from 'react-reveal/Fade';
+import ContactForm from './ContactForm';
 
 import picture from '../../assets/images/picture.png';
 
@@ -42,7 +43,9 @@ const Contact = () => {
                 <img src={picture} alt="zsendulo" />
               </LazyLoadComponent>
             </div>
-            <div className="form-wrapper"></div>
+            <div className="form-wrapper">
+              <ContactForm />
+            </div>
           </div>
           <div className="help-wrapper">
             <h1>Mi az, amivel segíteni tudsz nekünk?</h1>
