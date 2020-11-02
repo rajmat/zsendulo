@@ -60,15 +60,18 @@
         color: #707070;
       }
 
-      button {
-        background-color: #80d95b;
-        color: #ffffff;
+      a {
         width: max-content;
         min-width: 200px;
         margin: 0 auto;
+        text-decoration: none;
+        button {
+          background-color: #80d95b;
+          color: #ffffff;
 
-        &:hover {
-          background-color: #66ad48;
+          &:hover {
+            background-color: #66ad48;
+          }
         }
       }
     }

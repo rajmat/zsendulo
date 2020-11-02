@@ -1,6 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 
+import { Link } from 'gatsby';
+
 import sodexo from '../../assets/images/sodexo.jpg';
 import jozsefvaros from '../../assets/images/jozsefvaros.jpg';
 import kesztyugyar from '../../assets/images/kesztyugyar_kozossegi_haz_logo.png';
@@ -58,27 +60,33 @@ const Partners = () => {
   const partners = [
     {
       logo: sodexo,
-      description: ''
+      description: '',
+      url: 'https://hu.sodexo.com'
     },
     {
       logo: united_way,
-      description: ''
+      description: '',
+      url: 'http://www.unitedway.hu'
     },
     {
       logo: noe,
-      description: ''
+      description: '',
+      url: 'https://noe.hu'
     },
     {
       logo: jozsefvaros,
-      description: ''
+      description: '',
+      url: 'https://jkn.hu/'
     },
     {
       logo: pest_immami,
-      description: ''
+      description: '',
+      url: 'http://www.budapest.imami.hu'
     },
     {
       logo: kesztyugyar,
-      description: 'Kesztyűgyár kft.'
+      description: 'Kesztyűgyár kft.',
+      url: 'http://www.kesztyugyar.hu/'
     }
   ];
 
@@ -108,16 +116,18 @@ const Partners = () => {
       <Slider {...settings}>
         {partners.map((partner, index) => {
           return partner.logo || partner.description ? (
-            <div className="partner-wrapper" key={index}>
-              {partner.logo ? (
-                <div className="image-wrapper">
-                  <img src={partner.logo} alt={`zsendulo_partner_${index}`} />
-                </div>
-              ) : partner.description ? (
-                <div>{partner.description}</div>
-              ) : null}
-            </div>
-          ) : null;
+            <Link to={partner.url} target={'__blank'}>
+              <div className="partner-wrapper" key={index}>
+                {partner.logo ? (
+                  <div className="image-wrapper">
+                    <img src={partner.logo} alt={`zsendulo_partner_${index}`} />
+                  </div>
+                ) : partner.description ? (
+                  <div>{partner.description}</div>
+                ) : null}
+              </div>
+            </Link>
+          ) : null
         })}
       </Slider>
     </div>

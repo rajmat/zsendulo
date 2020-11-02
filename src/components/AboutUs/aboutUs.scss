@@ -61,15 +61,20 @@
         color: #707070;
       }
 
-      button {
-        background-color: #f7dc69;
-        color: black;
+      a {
+        width: max-content;
         width: max-content;
         min-width: 200px;
         margin: 0 auto;
+        text-decoration: none;
 
-        &:hover {
-          background-color: #bba74d;
+        button {
+          background-color: #f7dc69;
+          color: black;
+
+          &:hover {
+            background-color: #bba74d;
+          }
         }
       }
     }

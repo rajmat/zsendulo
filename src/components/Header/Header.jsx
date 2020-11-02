@@ -12,7 +12,6 @@ import email from '../../assets/images/email.png';
 
 import './header.scss';
 
-
 export default function BackToTop(props) {
   return (
     <div className={'header'}>
@@ -48,7 +47,7 @@ export default function BackToTop(props) {
           </div>
           <div className="contact">
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/explore/locations/115305033209990/zsendulo-tanoda/"
               rel={'noopener noreferrer nofollower'}
               aria-label={'zsendulo instagram'}
               target={'__blank'}
